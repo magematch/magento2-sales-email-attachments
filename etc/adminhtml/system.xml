@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="rameera" translate="label" sortOrder="500">
+            <label>Rameera Extensions</label>
+        </tab>
+        <section id="rameera_sales_email_attachments" translate="label" type="text"
+                 sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Sales Email Attachments</label>
+            <tab>rameera</tab>
+            <resource>Rameera_SalesEmailAttachments::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="attach_pdf_enabled" translate="label comment" type="select"
+                       sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Attach Sales PDF to Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="attach_pdf_for" translate="label" type="multiselect"
+                       sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Attach PDF For</label>
+                    <source_model>Rameera\SalesEmailAttachments\Model\Config\Source\AttachPdfIn</source_model>
+                    <depends>
+                        <field id="attach_pdf_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="attach_terms_and_conditions_enabled" translate="label comment" type="select"
+                       sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Attach Terms &amp; Conditions</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="attach_terms_and_conditions_for" translate="label" type="multiselect"
+                       sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Attach Terms &amp; Conditions For</label>
+                    <source_model>Rameera\SalesEmailAttachments\Model\Config\Source\AttachTermsConditions</source_model>
+                    <depends>
+                        <field id="attach_terms_and_conditions_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="terms_conditions" translate="label"
+                       type="Magento\Config\Block\System\Config\Form\Field\File"
+                       sortOrder="50" showInDefault="1" showInWebsite="1">
+                    <label>Terms &amp; Conditions File</label>
+                    <validate>validate-file</validate>
+                    <backend_model>Rameera\SalesEmailAttachments\Model\Config\Backend\TacFile</backend_model>
+                    <upload_dir config="system" scope_info="1">rameera/sales_email_attachments</upload_dir>
+                    <base_url type="media" scope_info="1">rameera/sales_email_attachments</base_url>
+                    <comment>Allowed types: .pdf, .doc, .docx, .txt</comment>
+                    <depends>
+                        <field id="attach_terms_and_conditions_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="cc" translate="label" type="text"
+                       sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>CC Email Address(es)</label>
+                    <comment>Comma-separated list of addresses.</comment>
+                </field>
+                <field id="bcc" translate="label" type="text"
+                       sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>BCC Email Address(es)</label>
+                    <comment>Comma-separated list of addresses.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
