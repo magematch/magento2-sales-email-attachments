@@ -6,8 +6,6 @@
 > Part of the [MageMatch](https://magematch.com) 
 > developer ecosystem
 
-# MageMatch Sales Email Attachments
-
 `MageMatch_SalesEmailAttachments` automatically appends PDF documents and policy files to Magento sales transactional emails — no custom email template edits required.
 
 ## Features
@@ -18,43 +16,6 @@
 - Enable/disable each attachment type independently from the admin panel.
 - Built with `declare(strict_types=1)`, constructor property promotion, and a clean `match` expression — no legacy Zend 1 code.
 - Compatible with Magento 2.4.4+ and PHP 8.1 through 8.4.
-
-## Compatibility
-
-- Magento Open Source / Adobe Commerce `2.4.4` and later in the `2.4.x` line.
-- PHP `8.1`, `8.2`, `8.3`, and `8.4`.
-
-## Installation
-
-> Important: use **one installation mode only**.
->
-> - If installed via Composer, do **not** keep a copy in `app/code/MageMatch/SalesEmailAttachments`.
-> - If using `app/code`, do **not** install `magematch/magento2-sales-email-attachments` via Composer.
-
-### Install from app/code
-
-Place the module under:
-
-`app/code/MageMatch/SalesEmailAttachments`
-
-Then run:
-
-```bash
-php bin/magento module:enable MageMatch_SalesEmailAttachments
-php bin/magento setup:upgrade
-php bin/magento setup:di:compile
-php bin/magento cache:flush
-```
-
-### Install with Composer
-
-```bash
-composer require magematch/magento2-sales-email-attachments
-php bin/magento module:enable MageMatch_SalesEmailAttachments
-php bin/magento setup:upgrade
-php bin/magento setup:di:compile
-php bin/magento cache:flush
-```
 
 ## Troubleshooting: duplicate module registration
 
@@ -163,10 +124,6 @@ Staging/dev install (before first stable tag is visible on Packagist):
 ```bash
 composer require magematch/magento2-sales-email-attachments:"dev-main@dev"
 ```
-
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
 
 ---
 ## Installation
