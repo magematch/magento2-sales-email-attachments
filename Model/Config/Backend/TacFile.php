@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rameera\SalesEmailAttachments\Model\Config\Backend;
+namespace MageMatch\SalesEmailAttachments\Model\Config\Backend;
 
 use Magento\Config\Model\Config\Backend\File;
 

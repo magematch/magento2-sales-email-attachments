@@ -1,43 +1,31 @@
 {
-    "name": "arjundhi/magento2-sales-email-attachments",
-    "description": "Magento 2 module that automatically appends PDF invoices, shipments, credit memos, and policy documents to outgoing sales transactional emails.",
-    "type": "magento2-module",
-    "license": "MIT",
-    "keywords": [
-        "magento2",
-        "sales-email",
-        "pdf-attachment",
-        "invoice-pdf",
-        "terms-conditions",
-        "rameera"
+  "name": "magematch/magento2-sales-email-attachments",
+  "description": "Magento 2 module that automatically appends PDF invoices, shipments, credit memos, and policy documents to outgoing sales transactional emails.",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arjun Dhiman",
+      "email": "arjun@magematch.com",
+      "homepage": "https://magematch.com"
+    }
+  ],
+  "homepage": "https://magematch.com",
+  "support": {
+    "issues": "https://github.com/magematch/magento2-sales-email-attachments/issues",
+    "source": "https://github.com/magematch/magento2-sales-email-attachments"
+  },
+  "require": {
+    "php": ">=8.1",
+    "magento/framework": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
     ],
-    "support": {
-        "issues": "https://github.com/arjundhi/magento2-sales-email-attachments/issues",
-        "source": "https://github.com/arjundhi/magento2-sales-email-attachments"
-    },
-    "require": {
-        "php": "^8.1 || ^8.2 || ^8.3 || ^8.4",
-        "magento/framework": "^103.0",
-        "magento/module-sales": "^103.0",
-        "magento/module-email": "^101.1",
-        "magento/module-config": "^101.2"
-    },
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Rameera\\SalesEmailAttachments\\": ""
-        }
-    },
-    "extra": {
-        "map": [
-            [
-                "*",
-                "Rameera/SalesEmailAttachments"
-            ]
-        ]
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "psr-4": {
+      "MageMatch\\SalesEmailAttachments\\": ""
+    }
+  }
 }

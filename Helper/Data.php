@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rameera\SalesEmailAttachments\Helper;
+namespace MageMatch\SalesEmailAttachments\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Store\Model\ScopeInterface;

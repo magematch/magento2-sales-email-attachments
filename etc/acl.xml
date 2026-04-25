@@ -7,7 +7,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Rameera_SalesEmailAttachments::config"
+                            <resource id="MageMatch_SalesEmailAttachments::config"
                                       title="Sales Email Attachments"/>
                         </resource>
                     </resource>

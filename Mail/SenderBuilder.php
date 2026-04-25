@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rameera\SalesEmailAttachments\Mail;
+namespace MageMatch\SalesEmailAttachments\Mail;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Filesystem;
@@ -17,7 +17,7 @@ use Magento\Sales\Model\Order\Pdf\Shipment;
 use Magento\Sales\Model\ResourceModel\Order\Creditmemo\CollectionFactory as CreditmemoCollectionFactory;
 use Magento\Sales\Model\ResourceModel\Order\Invoice\CollectionFactory as InvoiceCollectionFactory;
 use Magento\Sales\Model\ResourceModel\Order\Shipment\CollectionFactory as ShipmentCollectionFactory;
-use Rameera\SalesEmailAttachments\Helper\Data;
+use MageMatch\SalesEmailAttachments\Helper\Data;
 
 /**
  * Extends Magento's core SenderBuilder to append PDF and policy-document

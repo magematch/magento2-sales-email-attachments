@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rameera\SalesEmailAttachments\Mail\Template;
+namespace MageMatch\SalesEmailAttachments\Mail\Template;
 
 use Laminas\Mime\Mime;
 use Laminas\Mime\Part as MimePart;

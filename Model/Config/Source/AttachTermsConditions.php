@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rameera\SalesEmailAttachments\Model\Config\Source;
+namespace MageMatch\SalesEmailAttachments\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
