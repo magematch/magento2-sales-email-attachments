@@ -6,9 +6,9 @@
 > Part of the [MageMatch](https://magematch.com) 
 > developer ecosystem
 
-# Rameera Sales Email Attachments
+# MageMatch Sales Email Attachments
 
-`Rameera_SalesEmailAttachments` automatically appends PDF documents and policy files to Magento sales transactional emails — no custom email template edits required.
+`MageMatch_SalesEmailAttachments` automatically appends PDF documents and policy files to Magento sales transactional emails — no custom email template edits required.
 
 ## Features
 
@@ -28,19 +28,19 @@
 
 > Important: use **one installation mode only**.
 >
-> - If installed via Composer, do **not** keep a copy in `app/code/Rameera/SalesEmailAttachments`.
+> - If installed via Composer, do **not** keep a copy in `app/code/MageMatch/SalesEmailAttachments`.
 > - If using `app/code`, do **not** install `arjundhi/magento2-sales-email-attachments` via Composer.
 
 ### Install from app/code
 
 Place the module under:
 
-`app/code/Rameera/SalesEmailAttachments`
+`app/code/MageMatch/SalesEmailAttachments`
 
 Then run:
 
 ```bash
-php bin/magento module:enable Rameera_SalesEmailAttachments
+php bin/magento module:enable MageMatch_SalesEmailAttachments
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento cache:flush
@@ -50,7 +50,7 @@ php bin/magento cache:flush
 
 ```bash
 composer require arjundhi/magento2-sales-email-attachments
-php bin/magento module:enable Rameera_SalesEmailAttachments
+php bin/magento module:enable MageMatch_SalesEmailAttachments
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento cache:flush
@@ -60,17 +60,17 @@ php bin/magento cache:flush
 
 If you see an error like:
 
-`Module 'Rameera_SalesEmailAttachments' ... has been already defined in 'vendor/...'.`
+`Module 'MageMatch_SalesEmailAttachments' ... has been already defined in 'vendor/...'.`
 
 it means Magento found the same module in both locations:
 
-- `app/code/Rameera/SalesEmailAttachments`
+- `app/code/MageMatch/SalesEmailAttachments`
 - `vendor/arjundhi/magento2-sales-email-attachments`
 
 Fix (Composer-based install):
 
 ```bash
-rm -rf app/code/Rameera/SalesEmailAttachments
+rm -rf app/code/MageMatch/SalesEmailAttachments
 composer install
 php bin/magento setup:upgrade
 php bin/magento cache:flush
@@ -79,7 +79,7 @@ php bin/magento cache:flush
 Verify only one copy remains:
 
 ```bash
-test -d app/code/Rameera/SalesEmailAttachments && echo "app/code present" || echo "app/code missing"
+test -d app/code/MageMatch/SalesEmailAttachments && echo "app/code present" || echo "app/code missing"
 test -d vendor/arjundhi/magento2-sales-email-attachments && echo "vendor present" || echo "vendor missing"
 ```
 
@@ -87,7 +87,7 @@ test -d vendor/arjundhi/magento2-sales-email-attachments && echo "vendor present
 
 In admin, go to:
 
-`Stores > Configuration > Rameera Extensions > Sales Email Attachments`
+`Stores > Configuration > MageMatch Extensions > Sales Email Attachments`
 
 ### PDF Attachments
 
@@ -115,10 +115,10 @@ In admin, go to:
 
 The module overrides two Magento core classes via `di.xml` preferences:
 
-- `Magento\Sales\Model\Order\Email\SenderBuilder` → `Rameera\SalesEmailAttachments\Mail\SenderBuilder`
+- `Magento\Sales\Model\Order\Email\SenderBuilder` → `MageMatch\SalesEmailAttachments\Mail\SenderBuilder`
   Intercepts `configureEmailTemplate()` to append attachments before the email is sent.
 
-- `Magento\Framework\Mail\Template\TransportBuilder` → `Rameera\SalesEmailAttachments\Mail\Template\TransportBuilder`
+- `Magento\Framework\Mail\Template\TransportBuilder` → `MageMatch\SalesEmailAttachments\Mail\Template\TransportBuilder`
   Adds the `addAttachment()` method used by `SenderBuilder`.
 
 ## Module Structure
