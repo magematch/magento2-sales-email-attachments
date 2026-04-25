@@ -15,5 +15,5 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - CC and BCC fields applied to all outgoing sales emails.
 - `Rameera\SalesEmailAttachments\Mail\Template\TransportBuilder` — adds `addAttachment()` to the core transport builder via a DI preference.
 - `Rameera\SalesEmailAttachments\Mail\SenderBuilder` — intercepts `configureEmailTemplate()` to attach documents before dispatch.
-- Admin configuration section under `Rameera Extensions > Sales Email Attachments`.
+- Admin configuration section under `MageMatch Extensions > Sales Email Attachments`.
 - Client-side file-type validator mixin for the Terms & Conditions upload field.

@@ -11,7 +11,7 @@ Use this checklist before publishing a new GitHub release.
 
 ## Functional Checks
 
-- Confirm the `Sales Email Attachments` config section is visible under `Rameera Extensions`.
+- Confirm the `Sales Email Attachments` config section is visible under `MageMatch Extensions`.
 - Confirm PDF attachment is added to invoice emails when enabled.
 - Confirm Terms & Conditions file uploads and attaches correctly.
 - Confirm CC/BCC addresses receive copies of sales emails.
