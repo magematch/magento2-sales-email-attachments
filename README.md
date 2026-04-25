@@ -29,7 +29,7 @@
 > Important: use **one installation mode only**.
 >
 > - If installed via Composer, do **not** keep a copy in `app/code/MageMatch/SalesEmailAttachments`.
-> - If using `app/code`, do **not** install `arjundhi/magento2-sales-email-attachments` via Composer.
+> - If using `app/code`, do **not** install `magematch/magento2-sales-email-attachments` via Composer.
 
 ### Install from app/code
 
@@ -49,7 +49,7 @@ php bin/magento cache:flush
 ### Install with Composer
 
 ```bash
-composer require arjundhi/magento2-sales-email-attachments
+composer require magematch/magento2-sales-email-attachments
 php bin/magento module:enable MageMatch_SalesEmailAttachments
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
@@ -65,7 +65,7 @@ If you see an error like:
 it means Magento found the same module in both locations:
 
 - `app/code/MageMatch/SalesEmailAttachments`
-- `vendor/arjundhi/magento2-sales-email-attachments`
+- `vendor/magematch/magento2-sales-email-attachments`
 
 Fix (Composer-based install):
 
@@ -80,7 +80,7 @@ Verify only one copy remains:
 
 ```bash
 test -d app/code/MageMatch/SalesEmailAttachments && echo "app/code present" || echo "app/code missing"
-test -d vendor/arjundhi/magento2-sales-email-attachments && echo "vendor present" || echo "vendor missing"
+test -d vendor/magematch/magento2-sales-email-attachments && echo "vendor present" || echo "vendor missing"
 ```
 
 ## Configuration
@@ -155,13 +155,13 @@ It validates Composer metadata, PHP syntax, and XML well-formedness.
 Stable production install:
 
 ```bash
-composer require arjundhi/magento2-sales-email-attachments:^1.0
+composer require magematch/magento2-sales-email-attachments:^1.0
 ```
 
 Staging/dev install (before first stable tag is visible on Packagist):
 
 ```bash
-composer require arjundhi/magento2-sales-email-attachments:"dev-main@dev"
+composer require magematch/magento2-sales-email-attachments:"dev-main@dev"
 ```
 
 ## License
